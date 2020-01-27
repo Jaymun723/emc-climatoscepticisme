@@ -1,0 +1,5 @@
+.cache/
+.linaria-cache/
+node_modules/
+public/
+yarn-error.log

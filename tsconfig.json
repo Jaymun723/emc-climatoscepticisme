@@ -1,0 +1,15 @@
+{
+  // "compilerOptions": {
+  //   "strict": true,
+  //   "lib": ["DOM", "ESNext"],
+  //   "moduleResolution": "node",
+  //   "jsx": "react",
+  //   "esModuleInterop": true,
+  //   "allowSyntheticDefaultImports": true,
+  //   "module": "CommonJS"
+  // },
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true
+  }
+}
