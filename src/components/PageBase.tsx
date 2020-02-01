@@ -31,6 +31,8 @@ export const Title = styled.h1`
   font-size: 3rem;
   text-align: center;
 
+  cursor: pointer;
+
   @media (max-width: 460px) {
     font-size: 2rem;
   }

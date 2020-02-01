@@ -10,8 +10,6 @@ interface LayoutProps {
 export const Layout: React.SFC<LayoutProps> = ({ categorie, title, children }) => {
   const nav = (dir: string) => () => navigate(dir)
 
-  console.log("cat", categorie)
-
   return (
     <Page>
       <Helmet>
@@ -27,7 +25,7 @@ export const Layout: React.SFC<LayoutProps> = ({ categorie, title, children }) =
         <title>{title}</title>
       </Helmet>
       <Wrapper>
-        <Title>{title}</Title>
+        <Title onClick={nav("/")}>Les conséquences du climatoscepticisme</Title>
         <NavBar>
           <NavLink active={categorie === Categories.Economie} onClick={nav("economie")}>
             Économie

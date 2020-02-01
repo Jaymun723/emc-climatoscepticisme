@@ -28,7 +28,7 @@ const MainPart = styled.div`
 const IntroTitle = styled.div`
   padding: 10px;
   border-radius: 2px;
-  background-color: #000099;
+  background-color: #4ced84;
   color: white;
   display: flex;
   cursor: pointer;

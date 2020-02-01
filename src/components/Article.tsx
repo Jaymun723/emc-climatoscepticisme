@@ -2,11 +2,15 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "./Layout"
 import { styled } from "linaria/react"
+import { CategorieTitle } from "./ArticleList"
 
 export const MarkdownWrapper = styled.div`
   font-size: 20px;
   padding: 5px;
   line-height: 1.5;
+  p {
+    margin: 5px 0px;
+  }
 `
 
 interface Data {
@@ -17,9 +21,9 @@ interface Data {
   }
 }
 export default (props: { data: Data }) => {
-  console.log(props)
   return (
     <Layout title={props.data.markdownRemark.frontmatter.title}>
+      <CategorieTitle>{props.data.markdownRemark.frontmatter.title}</CategorieTitle>
       <MarkdownWrapper dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></MarkdownWrapper>
     </Layout>
   )
