@@ -64,7 +64,7 @@ const ReadMoreBtn = styled.button`
   font-size: 1.2rem;
   border: none;
   border-radius: 10px;
-  background-color: #000099;
+  background-color: #4ced84;
   cursor: pointer;
   color: white;
   align-self: flex-end;
