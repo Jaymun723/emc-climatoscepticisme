@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-position: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column-reverse;
   border-radius: 20px;
