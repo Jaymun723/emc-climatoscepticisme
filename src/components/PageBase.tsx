@@ -62,3 +62,10 @@ export const NavLink = styled.a<{ active?: boolean; onClick: () => void }>`
     background-color: rgba(0, 0, 0, 0.1);
   }
 `
+
+export const Footer = styled.footer`
+  margin-top: 20px;
+  color: grey;
+  font-style: italic;
+  font-size: 1.25em;
+`

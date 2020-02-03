@@ -1,50 +1,7 @@
 import * as React from "react"
 import { styled } from "linaria/react"
 import ArrowRight from "@material-ui/icons/ChevronRight"
-
-// const Wrapper = styled.div`
-//   border-radius: 20px;
-//   width: 100%;
-//   height: 50vh;
-// `
-
-// const Track = styled.div<{ activeIndex: number }>`
-//   transition: transform 0.5s;
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   position: relative;
-//   transform: translateX(${(props) => props.activeIndex * -100}%);
-// `
-
-// type SlideProps = { index: number; color: string; onClick: () => void }
-// const Slide = styled.div<SlideProps>`
-//   position: absolute;
-//   height: 100%;
-//   top: 0;
-//   transform: translateX(${(props) => props.index * 100}%);
-//   width: 100%;
-//   background-color: ${(props) => props.color};
-// `
-
-// export const Carrousel: React.SFC<{}> = () => {
-//   const [i, setI] = React.useState(0)
-//   return (
-//     <Wrapper>
-//       <Track activeIndex={i}>
-//         <Slide index={0} color={"red"} onClick={() => setI(0)}>
-//           Red
-//         </Slide>
-//         <Slide index={1} color={"green"} onClick={() => setI(1)}>
-//           Green
-//         </Slide>
-//         <Slide index={2} color={"blue"} onClick={() => setI(2)}>
-//           Blue
-//         </Slide>
-//       </Track>
-//     </Wrapper>
-//   )
-// }
+import { navigate } from "gatsby"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -118,24 +75,40 @@ const ReadMoreBtn = styled.button`
 `
 
 interface CarrouselProps {
-  articles: { title: string; description: string; imageUrl: string }[]
+  articles: { title: string; description: string; imageUrl: string; url: string }[]
 }
 export const Carrousel = ({ articles }: CarrouselProps) => {
   const [i, setI] = React.useState(0)
 
   const article = articles[i]
-  // console.log(i)
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setI((i + articles.length + 1) % articles.length)
+    }, 5000)
+    return () => {
+      clearInterval(timer)
+    }
+  })
 
   return (
     <Wrapper style={{ backgroundImage: `url(${article.imageUrl})` }}>
       <ButtonWrapper>
-        <ArrowRight fontSize="large" onClick={() => setI((i + articles.length - 1) % articles.length)} />
-        <ArrowRight fontSize="large" onClick={() => setI((i + articles.length + 1) % articles.length)} />
+        <ArrowRight
+          fontSize="large"
+          onClick={() => setI((i + articles.length - 1) % articles.length)}
+          style={{ color: "#4ced84" }}
+        />
+        <ArrowRight
+          fontSize="large"
+          onClick={() => setI((i + articles.length + 1) % articles.length)}
+          style={{ color: "#4ced84" }}
+        />
       </ButtonWrapper>
       <Descriptor>
         <ArticleTitle>{article.title}</ArticleTitle>
         <p>{article.description}</p>
-        <ReadMoreBtn>Lire plus</ReadMoreBtn>
+        <ReadMoreBtn onClick={() => navigate(article.url)}>Lire plus</ReadMoreBtn>
       </Descriptor>
     </Wrapper>
   )

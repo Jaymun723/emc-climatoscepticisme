@@ -3,6 +3,8 @@ title: Désastre naturel.
 slug: desastre-naturel
 categorie: 1
 image: ../media/carte-catastrophes-naturelles.png
+order: 1
+author: Manuel ACKER
 ---
 
 Les différentes catastrophes naturelles, en augmentation ces dernières années, liées au réchauffement climatique, sont responsables de nombreuses conséquences désastreuses pour la population.

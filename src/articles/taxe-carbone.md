@@ -3,6 +3,8 @@ title: La taxe carbone dans le monde
 slug: taxe-carbone
 categorie: 0
 image: ../media/tony-abbott.jpg
+order: 1
+author: Gaël CHAMAYOU
 ---
 
 ## En australie

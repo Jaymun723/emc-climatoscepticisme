@@ -9,7 +9,10 @@ export default () => {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
     query EconomieQuery {
-      allMarkdownRemark(filter: { frontmatter: { categorie: { eq: 0 } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { categorie: { eq: 0 } } }
+        sort: { order: ASC, fields: [frontmatter___order] }
+      ) {
         nodes {
           frontmatter {
             title

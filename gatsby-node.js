@@ -7,7 +7,7 @@ const cats = {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "MarkdownRemark" && node.frontmatter.slug) {
     createNodeField({
       name: "slug",
       node,
@@ -38,10 +38,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.allMarkdownRemark.nodes
 
   posts.forEach((node) => {
-    createPage({
-      path: node.fields.slug,
-      component: `${__dirname}/src/components/Article.tsx`,
-      context: { id: node.id },
-    })
+    if (node.fields && node.fields.slug) {
+      createPage({
+        path: node.fields.slug,
+        component: `${__dirname}/src/components/Article.tsx`,
+        context: { id: node.id },
+      })
+    }
   })
 }

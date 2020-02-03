@@ -9,7 +9,10 @@ export default () => {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
     query PolitiqueQuery {
-      allMarkdownRemark(filter: { frontmatter: { categorie: { eq: 2 } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { categorie: { eq: 2 } } }
+        sort: { order: ASC, fields: [frontmatter___order] }
+      ) {
         nodes {
           frontmatter {
             title

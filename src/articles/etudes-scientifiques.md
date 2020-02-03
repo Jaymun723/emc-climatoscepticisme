@@ -3,6 +3,8 @@ title: Le climatoscepticisme s'immisce dans les études scientifiques
 slug: etudes-scientifiques
 categorie: 0
 image: ../media/wei-hock-soon.jpg
+order: 1
+author: Gaël CHAMAYOU
 ---
 
 Willi Soon est un astronome et astrophysicien américain, employé par le Harvard-Smithsonian Center for Astrophysics. Durant les années 2000, il entame des recherches sur la cause du réchauffement climatique, qu'il attribue à l'activité solaire. Des documents, découverts en 2011, démontrent que Soon a reçu 1,2 million de dollars de la part d'entreprises de production d'énergie d'origine fossile telles que la Southern Company ou Exxon Mobil.

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Page, Wrapper, Title, NavBar, Categories, NavLink } from "./PageBase"
+import { Page, Wrapper, Title, NavBar, Categories, NavLink, Footer } from "./PageBase"
 import Helmet from "react-helmet"
 import { navigate } from "gatsby"
 
@@ -38,6 +38,7 @@ export const Layout: React.SFC<LayoutProps> = ({ categorie, title, children }) =
           </NavLink>
         </NavBar>
         {children}
+        <Footer>Articles par Gaël CHAMAYOU, Manuel ACKER et Victor CARO. Site par Victor CARO.</Footer>
       </Wrapper>
     </Page>
   )

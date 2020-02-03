@@ -9,7 +9,10 @@ export default () => {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
     query SocialQuery {
-      allMarkdownRemark(filter: { frontmatter: { categorie: { eq: 1 } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { categorie: { eq: 1 } } }
+        sort: { order: ASC, fields: [frontmatter___order] }
+      ) {
         nodes {
           frontmatter {
             title

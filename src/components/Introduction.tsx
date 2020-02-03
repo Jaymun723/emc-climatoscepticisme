@@ -20,8 +20,14 @@ const MainPart = styled.div`
   transition: max-height 0.5s;
   background-color: rgba(0, 0, 0, 0.1);
 
-  p {
+  p,
+  ul {
     margin: 5px;
+  }
+
+  ul,
+  li {
+    padding: 0px 15px;
   }
 `
 
@@ -51,9 +57,7 @@ export const Introduction = ({ content, title }: IntroductionProps) => {
         <h2>{title}</h2>
         <IconHolder>{show ? <ArrowUp /> : <ArrowDown />}</IconHolder>
       </IntroTitle>
-      <MainPart className={show ? "active" : undefined}>
-        <p>{content}</p>
-      </MainPart>
+      <MainPart className={show ? "active" : undefined} dangerouslySetInnerHTML={{ __html: content }} />
     </Wrapper>
   )
 }

@@ -3,6 +3,8 @@ title: Les 26 millions de victimes du climatoscepticisme.
 slug: 26-millions
 categorie: 1
 image: ../media/migrants.png
+order: 1
+author: Manuel ACKER
 ---
 
 Après de nombreuse catastrophes climatiques désastreuses, certaines personnes se retrouvent obligées de quitter leur pays car leurs habitats peuvent être détruits ou inondés par exemple. Cette nouvelle forme de migration est appelée migration climatique. Elle entraîne de nombreux mouvements de populations. En effet, l’an dernier, 26 millions de personnes ont fui leur pays pour raisons climatiques selon france inter. Un chiffre qui pourrait atteindre les 143 millions en 2050 selon la banque mondiale.
